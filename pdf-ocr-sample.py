@@ -14,7 +14,7 @@ def ocr_from_pdf(file_path):
     return text
 
 # 抽出対象ファイルパス
-file_path = "./docs/sample.pdf"
+file_path = "./docs/access_log.pdf"
 
 text = ocr_from_pdf(file_path)
 
