@@ -1,7 +1,7 @@
 # Extractor-mock
 PDF、Officeファイルからテキストのみを抽出するサンプルプログラム
  
-# 使用方法
+## 使用方法
  ※ M2 MacOSで動作確認
 ```bash
 git clone git@github.com:shogokaji/extractor-mock.git
@@ -11,7 +11,7 @@ docker exec -it test /bin/bash
 python docx-sample.py
 ```
  
-# Note
+## Note
 - PDF
   - 鍵付き、コピー禁止ファイルには非対応
 - Office
