@@ -1,4 +1,5 @@
 import openpyxl
+import secrets
 
 def extract_excel(filepath: str):
     # data_only=Trueで値のみを取得
@@ -15,4 +16,7 @@ def extract_excel(filepath: str):
                     results += text
     return results
 
-print(extract_excel("./docs/sample.xlsx"))
+local_path = "./docs/your_file_name.xlsx"
+
+with open(f'./results/xlsx-result-{secrets.token_urlsafe(6)}.txt', 'w') as file:
+    file.write(extract_excel(local_path))

@@ -1,4 +1,5 @@
 from docx import Document
+import secrets
 
 def extract_docx(filepath: str):
     text = ""
@@ -20,6 +21,7 @@ def extract_docx(filepath: str):
     
     return text
 
+local_path = "./docs/your_file_name.docx"
 
-
-print(extract_docx("./docs/sample.docx"))
+with open(f'./results/docx-result-{secrets.token_urlsafe(6)}.txt', 'w') as file:
+    file.write(extract_docx(local_path))

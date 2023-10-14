@@ -1,6 +1,7 @@
 import pptx
+import secrets
 
-def extract_ppt(filepath: str):
+def extract_pptx(filepath: str):
     prs = pptx.Presentation(filepath)
     text = ""
 
@@ -30,4 +31,7 @@ def extract_ppt(filepath: str):
                     text += run.text
     return text
 
-print(extract_ppt("./docs/sample.pptx"))
+local_path = "./docs/your_file_name.pptx"
+
+with open(f'./results/pptx-result-{secrets.token_urlsafe(6)}.txt', 'w') as file:
+    file.write(extract_pptx(local_path))

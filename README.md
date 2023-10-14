@@ -1,14 +1,17 @@
 # Extractor-mock
-PDF、Officeファイルからテキストのみを抽出するサンプルプログラム
+PDF、Officeファイルからテキストを抽出し、results配下にファイル出力する
  
 ## 使用方法
- ※ M2 MacOSで動作確認
+ ※ M2 MacOS, python 3.11で動作確認
+  
+1、抽出対象ファイルを`docs/`に置く  
+2、対象拡張子のプログラムファイルの`local_path`に指定する  
+3、対象拡張子のファイルを実行すると、`results/`に抽出結果がテキストファイルで出力される  
+  
+Docker使用の場合  
 ```bash
-git clone git@github.com:shogokaji/extractor-mock.git
 docker run --name test -d extractor-mock-image:latest bin/bash
 docker exec -it test /bin/bash
-# 各ファイルを実行
-python docx-sample.py
 ```
  
 ## Note
