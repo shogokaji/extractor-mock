@@ -1,6 +1,3 @@
 __pycache__/
 docs/*
 results/*
-
-# !docs/.keep
-!results/.keep
